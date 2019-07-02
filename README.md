@@ -1,4 +1,4 @@
 # web170
 wine & wordpress
 
-wind website [index](wine/index.html)
+wine website [index](wine/index.html)
