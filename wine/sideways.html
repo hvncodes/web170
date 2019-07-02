@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine About Page</title>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .accordion:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    </style>
+  </head>
+
+  <body class="about inner">
+    <header>
+      
+      <a href="index.html"><img class="left" id="logo" src="images/wine-logo-2.png" alt="wine logo" /></a>
+      <nav>
+      <ul class="right">
+        <li class="left left20"><a href="about.html">About</a></li>
+        <li class="left left20"><a href="about.html">Wine</a>
+          <ul class="dropdown">
+            <li><a href="cabernet.html">Cabernet</a></li>
+            <li><a href="merlot.html">Merlot</a></li>
+            <li><a href="syrah.html">Syrah</a></li>
+            <li><a href="malbec.html">Malbec</a></li>
+          </ul>
+        </li>
+        <li class="left left20"><a href="about.html">Tours</a>
+          <ul class="dropdown">
+            <li><a href="st-michelle.html">St Michelle</a></li>
+            <li><a href="sideways.html">Sideways</a></li>
+            <li><a href="medford.html">Medford</a></li>
+            <li><a href="columbia.html">Columbia</a></li>
+          </ul>
+        </li>
+        <li class="left left20"><a href="about.html">Contact</a></li>
+        <li class="left left20"><a href="about.html">Blog</a></li>
+      </ul>
+      </nav>
+      
+    </header>
+    
+    <div class="wrapper-inner"> 
+      <main class="left">
+       <img src="images/sideways-3.jpg" alt="sideways man sipping wine">
+        <h1>Welcome to our most popular Sideways tour!</h1>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in. Aenean fermentum, elit non aliquam mattis, dui justo rutrum nunc, non malesuada justo risus et erat.</p>
+        <br />
+        <div class="row">
+          <div class="entry">
+            <div class="size20">
+              <img src="images/sideways-thumb.jpg" alt="wine bottle" />
+            </div>
+            <div class="size80">
+              <h3>Point Wine</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in.</p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="size20">
+              <img src="images/sideways-thumb.jpg" alt="wine bottle" />
+            </div>
+            <div class="size80">
+              <h3>Point Wine</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in.</p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="size20">
+              <img src="images/sideways-thumb.jpg" alt="wine bottle" />
+            </div>
+            <div class="size80">
+              <h3>Point Wine</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in.</p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="size20">
+              <img src="images/sideways-thumb.jpg" alt="wine bottle" />
+            </div>
+            <div class="size80">
+              <h3>Point Wine</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in.</p>
+            </div>
+          </div>
+        </div> <!-- end row -->
+        
+        <ul class="awards">
+          <li><p>Our Wine Rewards</p><li>
+          <li class="left"><img src="images/award2.png" alt="awards"></li>
+          <li class="left"><img src="images/award2.png" alt="awards"></li>
+          <li class="left"><img src="images/award2.png" alt="awards"></li>
+          <li class="left"><img src="images/award2.png" alt="awards"></li>
+          <li class="left"><img src="images/award2.png" alt="awards"></li>
+          <li class="left"><img src="images/award2.png" alt="awards"></li>
+        </ul>
+      </main>
+      
+      <aside class="right">
+        <div>
+          <form action="/action_page.php">
+            <input type="text" name="searchQuery" placeholder="Search...">
+            <input type="submit" value="Search">
+          </form>
+        </div>
+        <h3>Choose your tour!</h3>
+        <p>Fusce at ex at felis pellentesque convallis vel sed velit. Donec sollicitudin condimentum elit sed posuere. Integer elit purus, condimentum in risus a, congue imperdiet enim. Etiam feugiat interdum rutrum. Nam mi purus, gravida id aliquet eget, dictum sed lectus.</p>
+
+        <h2><a href="https://www.w3schools.com/howto/howto_js_accordion.asp">Accordian provided by W3schools</a></h2>
+        <button class="accordion">July 1 - 2, 2019</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">July 10 - 11, 2019</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">July 20 - 21, 2019</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </aside>
+    </div> <!-- end wrapper -->
+    
+    <footer class="clear">
+      <div class="wrapper">
+        <h2>Our Weekly Wine Picks</h2>
+        <div class="row">
+          <div class="third left right20">
+            <h3>Wine 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in. <span><a href="">Read More</a></span></p>
+          </div> <!-- end third -->
+          <div class="third left right20">
+            <h3>Wine 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in.</p>
+          </div> <!-- end third -->
+          <div class="third left">
+            <h3>Wine 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis aliquam sagittis. Donec elementum dolor mauris, sit amet efficitur mi lacinia in.</p>
+          </div> <!-- end third -->
+        </div>
+      </div> <!-- end footer wrapper -->
+      <div id="copyright">
+        <div class="wrapper">
+          <ul class="right">
+            <li>Copyright &copy; 2019</li>
+            <li>All Rights Reserved</li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Web Design by John</a></li>
+          </ul>
+        </div> <!-- end 2nd footer wrapper -->
+      </div> <!-- end copyright -->
+    </footer>
+    
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+    
+    
+  </body>
+</html>

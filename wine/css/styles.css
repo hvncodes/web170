@@ -34,13 +34,13 @@ body {
 
 main {
   width: 61.70%;
-  height: 400px;
+/*  height: 400px;*/
   background: beige;
 }
 
 aside {
   width: 36.17%;
-  height: 300px;
+/*  height: 300px;*/
   background: tan;
 }
 
@@ -50,7 +50,10 @@ footer .wrapper h2 {
 
 header {
   overflow: hidden;
-
+  background: yellow;
+  width: 85%;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
 }
 
 #logo {
@@ -150,11 +153,44 @@ footer li {
   margin-left: 20px;
 }
 
+.video {
+  background: lightblue;
+  height: 180px;
+  width: 70%;
+  max-width: 300px;
+}
 
+.awards {
+  border: 1px solid #800;
+  overflow: auto;
+  padding: 20px 3.70%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
+.awards li {
+  width: 13.57%;
+  margin-right: 3.70%;
+  list-style-type: none;
+}
 
+.awards li:last-of-type {
+  margin-right: 0;
+}
 
+.awards li:first-child {
+  margin: 0 0 20px 0;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
 
+.entry {
+  clear: both;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
 
 
 
@@ -188,6 +224,22 @@ img {
   margin-top: 8px;
 }
 
+input[type="submit"] {
+  padding: 2px 6px 3px 6px;
+  width: 10em;
+}
+
+.size20 {
+  width: 20%;
+  float: left;
+}
+
+.size80 {
+  width: 75%;
+  float: right;
+}
+
+
 
 
 /*Typography*/
@@ -200,10 +252,15 @@ blockquote {
   margin: 20px auto;
   font-size: 1.4em;
   font-style: italic;
+  position: relative;
 }
 
 h1, h2, h3, h4 {
-  margin-bottom: 8px
+  margin-bottom: 8px;
+}
+
+h2, h3 {
+  margin-top: 8px;
 }
 
 .col-4 h3, .col-4 p, .third h3, .third p {
@@ -219,6 +276,21 @@ img + h3 {
   margin: 10px 0 0 0;
 }
 
+blockquote.leftborder {
+  width: 100%;
+  border-left: 13px solid #E0E0E0;
+  padding-left: 20px;
+}
+
+blockquote.leftquote:before {
+  position: absolute;
+  font-size: 34px;
+  font-family: FontAwesome;
+  margin-right: 13px;
+  right: 100%;
+  content: "\f10d";
+}
+
 /*media queries*/
 @media screen and (max-width: 1200px) {
   body {
@@ -230,7 +302,7 @@ img + h3 {
   body {
     background: yellow;
   }
-  .wrapper, .wrapper-inner {
+  .wrapper, .wrapper-inner, header {
     width: 90%;
   }
 }
@@ -248,7 +320,7 @@ img + h3 {
   .col-4:nth-child(2) {
     margin-right: 0;
   }
-  .wrapper, .wrapper-inner {
+  .wrapper, .wrapper-inner, header {
     width: 94%;
   }
 }
@@ -271,7 +343,14 @@ img + h3 {
     width: auto;
     float: none;
   }
-  .wrapper, .wrapper-inner {
+  .wrapper, .wrapper-inner, header {
     width: 96%;
+  }
+  .wrapper-inner {
+    margin-top: 20px;
+  }
+  .home, .inner {
+    background-image: none;
+    background: #fff;
   }
 }
