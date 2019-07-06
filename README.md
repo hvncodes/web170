@@ -1,4 +1,6 @@
 # web170
 wine & wordpress
 
-wine website [index](wine/index.html)
+template [[X](template/index.html)]
+
+wine website [[index](wine/index.html)]
