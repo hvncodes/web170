@@ -1,6 +1,5 @@
 # web170
-wine & wordpress
+### wine & wordpress
+template: [[index](template/index.html)], [[inner](template/inner.html)], [[blog](template/blog.html)]
 
-template [[index](template/index.html)], [[inner](template/inner.html)], [[blog](template/blog.html)]
-
-wine website [[index](wine/index.html)]
+wine page: [[index](wine/index.html)]
