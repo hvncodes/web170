@@ -4,4 +4,3 @@ template: [[index](template/index.html)], [[inner](template/inner.html)], [[blog
 
 wine page: [[index](wine/index.html)]
 
-(wip) portfolio: [[index](portfolio/index.html)]
