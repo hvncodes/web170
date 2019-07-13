@@ -53,8 +53,10 @@ img {
 	vertical-align:bottom;
 }
 a {
+/*
 	color:#444;
 	text-decoration:none;
+*/
 }
 a:hover {
 	color:#444;
@@ -88,10 +90,10 @@ input:focus {
 /* header */
 .header {
   max-width: 1100px;
-/*  width: 80%;*/
+  width: 80%;
   margin: 0 auto;
 /*  height: 70px;*/
-  background: yellow;
+  background: lightcoral;
   padding: 20px 0;
 }
 /* logo */
@@ -107,17 +109,36 @@ input:focus {
 }
 .nav ul {
   float: right;
-  background-color: lightcoral;
+  background-color: #f44336;
   padding: 0;
+}
+.nav > ul {
+/*  padding: 5px 10px;*/
 }
 .nav > ul > li {
   float: left;
   margin-left: 20px;
   list-style-type: none;
+  padding: 5px 10px;
+}
+/*
+.nav > ul > li:hover {
+  background-color: #fff;
+}
+*/
+.nav > ul > li:hover a {
+  color: #000;
 }
 .nav a {
   text-decoration: none;
+  color: #fff;
+  font-weight: 400;
 }
+
+.nav > ul > li.unclickable {
+  position: relative;
+}
+
 .sub-menu {
   display: none;
   
@@ -137,10 +158,14 @@ input:focus {
 */
 
 .nav li:hover .sub-menu {
+  /*  background: rgba(225, 225, 225, .85);*/
+  background-color: rgba(244,67,54, .85); /*#f44336*/
+  
+  border: 4px solid #fff;
+  
   display: block;
   position: absolute;
-  background: rgba(225, 225, 225, .85);
-  
+  top: 24px;
   z-index: 999;
 }
 .nav li:hover .sub-menu li {
@@ -151,6 +176,12 @@ input:focus {
 .nav li:hover .sub-menu li a {
   display: block;
   padding: 5px 10px;
+  color: #fff;
+}
+
+.nav li:hover .sub-menu li a:hover {
+  background-color: #fff;
+  color: #000;
 }
 /* main */
 main {
@@ -170,6 +201,11 @@ main {
   background: #ddd;
   clear: both;
 }
+#footer-left-content {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
 
 /*------------------------------------*\
     PAGES
@@ -181,7 +217,9 @@ main {
     IMAGES
 \*------------------------------------*/
 
-
+article > img {
+  display: block;
+}
 
 /*------------------------------------*\
 	TYPOGRAPHY
@@ -203,22 +241,34 @@ main {
 \*------------------------------------*/
 
 @media only screen and (min-width:320px) {
-
+    #footer-left-content {
+        width: 100%;
+    }
 }
 @media only screen and (min-width:480px) {
-
+    #footer-left-content {
+        width: 100%;
+    }
 }
 @media only screen and (min-width:768px) {
-
+    #footer-left-content {
+        width: 100%;
+    }
 }
 @media only screen and (min-width:1024px) {
-
+    #footer-left-content {
+        width: 50%;
+    }
 }
 @media only screen and (min-width:1140px) {
-
+    #footer-left-content {
+        width: 50%;
+    }
 }
 @media only screen and (min-width:1280px) {
-
+    #footer-left-content {
+        width: 50%;
+    }
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {

@@ -1,13 +1,20 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
+               
+                <div id="footer-left-content">
+                    <p><?php bloginfo('name'); ?></p>
+                    <!-- copyright -->
+                    <p class="copyright">
+                        Copyright &copy; <?php echo date('Y'); ?> <a href="#">John Nguyen</a>. All Rights Reserved. <?php _e('Powered by', 'html5blank'); ?>
+                        <a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+                    </p>
+                    <!-- /copyright -->
+                    <p>
+                      Validate <a href="http://validator.w3.org/check?uri=referer">HTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+                    </p>
+		        </div>
+                
+                <div class="clear"></div>
 			</footer>
 			<!-- /footer -->
 
