@@ -3,3 +3,5 @@
 template: [[index](template/index.html)], [[inner](template/inner.html)], [[blog](template/blog.html)]
 
 wine page: [[index](wine/index.html)]
+
+(wip) portfolio: [[index](portfolio/index.html)]
