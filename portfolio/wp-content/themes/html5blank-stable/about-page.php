@@ -2,7 +2,7 @@
 /*Template name: About page*/
 ?>
 
-	<main role="main">
+	<main>
 		<!-- section -->
 		<section>
 

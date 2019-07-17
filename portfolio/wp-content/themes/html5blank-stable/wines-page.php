@@ -2,11 +2,11 @@
 /*Template name: Wines page*/
 ?>
 
-	<main role="main">
+	<main>
 		<!-- section -->
 		<section>
 
-			<h1><?php the_title(); ?></h1>
+<!--			<h1><php the_title(); ?></h1>-->
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -41,7 +41,7 @@
 		</section>
 		<!-- /section -->
 	</main>
-
+<!-- get default sidebar -->
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

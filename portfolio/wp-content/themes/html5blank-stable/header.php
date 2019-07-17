@@ -12,7 +12,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+        <?php wp_enqueue_script('jquery') ?>
 		<?php wp_head(); ?>
+		<script type="application/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
 		<script>
         // conditionizr.com
         // configure environment tests
@@ -27,7 +29,7 @@
 
 		
         <!-- header -->
-        <header class="header clear" role="banner">
+        <header class="header clear">
 
                 <!-- logo -->
                 <div class="logo">
@@ -39,7 +41,8 @@
                 <!-- /logo -->
 
                 <!-- nav -->
-                <nav class="nav" role="navigation">
+                <nav class="nav">
+                    <button class="nav-button">Toggle Navigation</button>
                     <?php html5blank_nav(); ?>
                 </nav>
                 <!-- /nav -->

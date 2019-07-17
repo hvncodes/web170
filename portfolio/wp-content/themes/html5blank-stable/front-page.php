@@ -1,7 +1,7 @@
 <?php get_header(); 
 /*Template name: Front page*/
 ?>
-<!--	<main role="main">-->
+<!--	<main>-->
 		<!-- section -->
 		<section>
 

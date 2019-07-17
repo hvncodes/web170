@@ -72,7 +72,7 @@ function html5blank_nav()
 		'container'       => 'div',
 		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu',
+		'menu_class'      => 'primary-nav',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -80,13 +80,13 @@ function html5blank_nav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
 	);
 }
-
+// Removed items_wrap key above:
+// 		'items_wrap'      => '<ul>%3$s</ul>',
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
@@ -98,7 +98,7 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/jquery.min.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
 }
@@ -188,6 +188,17 @@ if (function_exists('register_sidebar'))
         'name' => __('About Sidebar Widget Area', 'html5blank'),
         'description' => __('About sidebar', 'html5blank'),
         'id' => 'about-sidebar',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define About Sidebar Widget
+    register_sidebar(array(
+        'name' => __('Tours Sidebar Widget Area', 'html5blank'),
+        'description' => __('Tours sidebar', 'html5blank'),
+        'id' => 'tours-sidebar',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
