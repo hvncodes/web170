@@ -169,5 +169,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
-add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
