@@ -109,6 +109,7 @@ body {
 /*  height: 400px;*/
   background: yellow;
   margin: 0 auto 20px auto;
+  overflow: hidden;
 }
 
 .home .site-content {
@@ -132,6 +133,11 @@ body {
 .col-4:nth-child(4) {
   margin-right: 0;
 }*/
+
+.third {
+  width: 31.914893617021276595744680851064%;
+  border: 1px dotted #800;
+}
 
 .col-4 h3,
 .col-4 p,
@@ -163,7 +169,7 @@ body {
 }
 
 .site-footer {
-  height: 400px;
+/*  height: 400px;*/
   background: #ddd;
   clear: both;
 }
