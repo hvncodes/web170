@@ -210,6 +210,47 @@ main {
     overflow: hidden;
 }
 
+.view-article {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 8px 0 15px;
+}
+
+span.date,
+span.author,
+span.comments {
+    display: block;
+    font-size: .875em;
+    font-style: italic;
+}
+
+span.comments {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 8px 0 5px 0;
+}
+
+div.comments {
+    
+}
+
+.single label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.comment-form-cookies-consent {
+    margin: 5px 0;
+}
+
+.comment-form-cookies-consent label {
+    display: inline;
+}
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
@@ -238,6 +279,8 @@ article > img {
     font-weight:normal;
     font-style:normal;
 }
+
+
 
 /*------------------------------------*\
     RESPONSIVE
