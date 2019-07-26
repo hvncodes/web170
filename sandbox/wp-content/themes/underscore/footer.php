@@ -14,6 +14,7 @@
 	</div><!-- #content end wrapper -->
 
 	<footer id="colophon" class="site-footer">
+        <?php echo do_shortcode('[widget id="custom_html-4"]'); ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscore' ) ); ?>">
 				<?php

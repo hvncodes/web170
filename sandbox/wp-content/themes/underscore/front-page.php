@@ -19,6 +19,8 @@ get_header();
 <!-- Our wrapper begins at the bottom of the header.php file -->
 <!--		<main id="main" class="site-main">-->
 
+        <?php echo do_shortcode('[metaslider id="46"]'); ?>
+
 		<?php
 		while ( have_posts() ) :
 			the_post();

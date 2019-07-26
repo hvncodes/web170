@@ -34,6 +34,8 @@ body {
 /*  font: 300 11px/1.4;*/
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#444;
+    background-image: url('http://flickeringflame.org/web170/portfolio/wp-content/uploads/bg-inner.jpg');
+    background-repeat: no-repeat;
 }
 /* clear */
 .clear:before,
@@ -83,9 +85,12 @@ input:focus {
   max-width: 1100px;
 /*  width: 95%;*/
   width: 80%;
-  margin: 0 auto;
+  margin: 180px auto 0 auto;
   position: relative;
   background: beige;
+}
+.home .wrapper {
+    margin: 0 auto;
 }
 /* header */
 .header {
@@ -280,7 +285,9 @@ article > img {
     font-style:normal;
 }
 
-
+p {
+    margin-bottom: 20px;
+}
 
 /*------------------------------------*\
     RESPONSIVE

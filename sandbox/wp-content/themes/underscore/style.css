@@ -184,10 +184,23 @@ body {
   float: left;
 }
 
+.right {
+    float: right;
+}
+
 .right20 {
   margin-right: 2.12%;
 }
 
+time.updated {
+    display: none;
+}
+
+span.cat-links,
+span.comments-link,
+span.edit-link {
+    display: block;
+}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -420,6 +433,28 @@ table {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+#copyright {
+  height: 50px;
+  line-height: 50px;
+  background: #777;
+}
+
+footer li {
+  list-style-type: none;
+  float: left;
+  margin-left: 20px;
+}
+
+#copyright ul {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    padding-right: 20px;
+}
+
+div.site-info {
+    text-align: center;
+}
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/

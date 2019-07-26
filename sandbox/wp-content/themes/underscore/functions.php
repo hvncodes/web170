@@ -123,6 +123,16 @@ function underscore_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Blog Sidebar', 'underscore' ),
+		'id'            => 'sidebar-blog',
+		'description'   => esc_html__( 'Add widgets here.', 'underscore' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'underscore_widgets_init' );
 
@@ -169,3 +179,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
+add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
