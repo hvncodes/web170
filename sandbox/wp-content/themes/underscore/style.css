@@ -78,13 +78,31 @@ body {
   background-repeat: no-repeat !important;
 }
 
+article.post {
+    border-bottom: 1px solid #000;
+    padding: 20px 0;
+}
+
+article.post:last-of-type {
+    border-bottom: none;
+}
+.entry-header {
+    margin-bottom: 20px;
+}
+.entry-title {
+    margin: 0 0 0 0;
+}
+.entry-content p {
+    margin: 20px 0;
+}
+
 /*++++++++++++++++++++++++++ MY CONTAINERS ++++++++++++++++++++++++++*/
 
 .site-header {
 /*  height: 200px;*/
   max-width: 1100px;
 /*  margin: 0 auto;*/
-  background: pink;
+/*  background: pink;*/
   margin: 20px auto 200px auto;
 /*  overflow: hidden;*/
   height: 70px;
@@ -107,7 +125,7 @@ body {
   clear: both;
   max-width: 1100px;
 /*  height: 400px;*/
-  background: yellow;
+/*  background: yellow;*/
   margin: 0 auto 20px auto;
   overflow: hidden;
 }
@@ -120,7 +138,7 @@ body {
 .content-area {
   float: left;
   width: 61.70%;
-  background: tan;
+/*  background: tan;*/
 }
 
 .col-4 {
@@ -139,11 +157,12 @@ body {
   border: 1px dotted #800;
 }
 
-.col-4 h3,
-.col-4 p,
-.third h3,
-.third p {
+.row .col-4 h3,
+.row .col-4 p,
+.row .third h3,
+.row .third p {
   padding: 0 8px 10px 8px;
+    margin: 0;
 }
 
 .col-4 p.fix {
@@ -155,17 +174,21 @@ body {
   font-size: .875em;
   margin-bottom: 5px;
 }
-
-.fix {
-  padding: 0;
-  margin: 0;
+.row .col-4 h3 {
+    margin: 0;
+}
+.row .col-4 p.fix {
+    padding: 0;
+    margin: 0;
 }
 
 /* ASIDE */
 .widget-area {
   float: right;
   width: 36.17%;
-  background: lightblue;
+/*  background: lightblue;*/
+    padding: 20px;
+    border: 1px dotted #000;
 }
 
 .site-footer {
@@ -201,6 +224,18 @@ span.comments-link,
 span.edit-link {
     display: block;
 }
+
+div.entry-meta,
+span.cat-links,
+span.comments-link,
+span.edit-link {
+    font-size: 0.75em;
+}
+
+span.comments-link {
+    text-align: center;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -316,6 +351,7 @@ sup {
 
 img {
 	border-style: none;
+    display: block;
 }
 
 /*--------------------------------------------------------------
@@ -436,7 +472,7 @@ table {
 #copyright {
   height: 50px;
   line-height: 50px;
-  background: #777;
+  background: #999;
 }
 
 footer li {
@@ -454,12 +490,18 @@ footer li {
 
 div.site-info {
     text-align: center;
+    clear: both;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    background: #777;
 }
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+    color: #e4002b;
+/*    color: royalblue;*/
 }
 
 a:visited {
@@ -467,7 +509,8 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+    color: #98001d;
+/*	color: midnightblue;*/
 }
 
 a:focus {
@@ -546,6 +589,7 @@ a:hover, a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+    color: #e4002b!important;
 }
 
 /* Small menu. */
@@ -611,12 +655,30 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5em 0;
 	/* Make sure select elements fit in widgets. */
+}
+
+.widget-area .widget:nth-last-child(1) {
+    margin: 0;
 }
 
 .widget select {
 	max-width: 100%;
+}
+
+.widget_recent_entries ul,
+.widget_categories ul,
+.widget_archive ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget-title {
+    margin: 0;
+    font-size: 1.25em;
+    color: #000;
 }
 
 /*--------------------------------------------------------------
