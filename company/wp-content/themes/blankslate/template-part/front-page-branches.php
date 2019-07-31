@@ -1,5 +1,6 @@
-<?php get_header(); ?>
-<?php $layout = get_option( 'front_page_layout', 'default' ); get_template_part( 'front-page', $layout );?>
+<?php get_header();
+/*Template name: Branches Front Page*/
+?>
 <main id="content">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
