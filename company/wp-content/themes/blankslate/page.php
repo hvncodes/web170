@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php $layout = get_option( 'front_page_layout', 'default' ); get_template_part( 'front-page', $layout );?>
+<php $layout = get_option( 'front_page_layout', 'default' ); get_template_part( 'front-page', $layout );?>
 <main id="content">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -15,5 +15,6 @@
 <?php if ( comments_open() && ! post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
 </main>
+<h1>IS IT PAGEdotPHP?</h1>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
