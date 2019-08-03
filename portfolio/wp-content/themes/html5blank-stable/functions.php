@@ -172,6 +172,17 @@ function add_slug_to_body_class($classes)
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
+    // Define Default Sidebar Widget
+    register_sidebar(array(
+        'name' => __('Default Sidebar Widget Area', 'html5blank'),
+        'description' => __('Default Sidebar', 'html5blank'),
+        'id' => 'sidebar-1',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
     // Define Wines Sidebar Widget
     register_sidebar(array(
         'name' => __('Wines Sidebar Widget Area', 'html5blank'),
