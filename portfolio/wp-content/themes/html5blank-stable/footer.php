@@ -1,6 +1,6 @@
 			<!-- footer -->
 			<footer class="footer">
-                <?php echo do_shortcode('[widget id ="custom_html-5"]'); ?>
+<!--                <php echo do_shortcode('[widget id ="custom_html-5"]'); ?>-->
                 <div id="footer-left-content">
                     <p><?php bloginfo('name'); ?></p>
                     <!-- copyright -->

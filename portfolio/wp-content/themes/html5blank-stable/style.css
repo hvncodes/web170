@@ -34,6 +34,9 @@ body {
 /*  font: 300 11px/1.4;*/
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#444;
+/*    background-image: url('http://flickeringflame.org/web170/portfolio/wp-content/uploads/bg-inner.jpg');*/
+    background-image: url('http://flickeringflame.org/web170/portfolio/wp-content/uploads/bg-inner-2.png');
+    background-repeat: no-repeat;
 }
 /* clear */
 .clear:before,
@@ -79,13 +82,16 @@ input:focus {
 
 /* wrapper */
 .wrapper {
-/*  max-width: 1280px;*/
+/*    background: beige;*/
+/*    max-width: 1280px;*/
+/*    width: 95%;*/
   max-width: 1100px;
-/*  width: 95%;*/
   width: 80%;
-  margin: 0 auto;
+  margin: 178px auto 0 auto;
   position: relative;
-  background: beige;
+}
+.home .wrapper {
+    margin: 20px auto 0 auto;
 }
 /* header */
 .header {
@@ -93,8 +99,8 @@ input:focus {
   width: 80%;
   margin: 0 auto;
 /*  height: 70px;*/
-  background: lightcoral;
-  padding: 20px 0;
+/*  background: lightcoral;*/
+  padding: 20px 0 0 0;
 }
 /* logo */
 .logo {
@@ -111,9 +117,10 @@ input:focus {
 .nav-button { display: none; } /* hide the navigation button by default */
 
 .nav ul {
-  float: right;
-  background-color: #f44336;
-  padding: 0;
+/*    background-color: #f44336;*/
+    background-color: rgba(0,0,0,0.2);
+    float: right;
+    padding: 0;
 }
 .nav > ul {
 /*  padding: 5px 10px;*/
@@ -161,15 +168,15 @@ input:focus {
 */
 
 .nav li:hover .sub-menu {
-  /*  background: rgba(225, 225, 225, .85);*/
-  background-color: rgba(244,67,54, .85); /*#f44336*/
-  
-  border: 4px solid #fff;
-  
-  display: block;
-  position: absolute;
-  top: 24px;
-  z-index: 999;
+/*    #f44336*/
+/*    background-color: rgba(244,67,54, .85);*/
+    background-color: rgba(225, 225, 225, .85);
+    border: 2px solid #000;
+    display: block;
+    position: absolute;
+    top: 24px;
+    z-index: 999;
+    width: 120px;
 }
 .nav li:hover .sub-menu li {
   margin-left: 0;
@@ -188,15 +195,19 @@ input:focus {
 }
 /* main */
 main {
-  width: 61%;
-  float: left;
-  background-color: coral;
+/*    background-color: coral;*/
+    width: 61%;
+    float: left;
+    border: 1px dotted #000;
+    padding: 20px;
 }
 /* sidebar */
 .sidebar {
-  width: 36%;
-  float: right;
-  background-color: cornflowerblue;
+/*    background-color: cornflowerblue;*/
+    width: 36%;
+    float: right;
+    padding: 20px;
+    border: 1px dotted #000;
 }
 /* footer */
 .footer {
@@ -210,6 +221,84 @@ main {
     overflow: hidden;
 }
 
+.view-article {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 8px 0 15px;
+}
+
+span.date,
+span.author,
+span.comments {
+    display: block;
+    font-size: .875em;
+    font-style: italic;
+}
+
+span.comments {
+    margin-bottom: 10px;
+}
+
+section > h1 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+div.comments {
+    
+}
+
+.single label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.comment-form-cookies-consent {
+    margin: 5px 0;
+}
+
+.comment-form-cookies-consent label {
+    display: inline;
+}
+.screen-reader-text {
+    display: none;
+}
+.widget_recent_comments,
+.widget_search,
+.widget_recent_entries,
+.widget_categories,
+.widget_archive {
+    margin: 0 0 20px 0; /* was previously 1.5em */
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget-area .widget:nth-last-child(1) {
+    margin: 0;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_categories ul,
+.widget_archive ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget_recent_comments h3,
+.widget_recent_entries h3,
+.widget_categories h3,
+.widget_archive h3 {
+    margin: 0;
+    font-size: 1.25em;
+    color: #000;
+}
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
@@ -238,7 +327,25 @@ article > img {
     font-weight:normal;
     font-style:normal;
 }
-
+h1 {
+    font-size: 3.052em;
+}
+h2 {
+    font-size: 2.44em;
+}
+h3 {
+    font-size: 1.953em;
+}
+h4 {
+    font-size: 1.563em;
+}
+blockquote {
+    margin: 0 10% 20px 10%;
+    font-size: 1.25em;
+}
+p {
+    padding: 10px 20px;
+}
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/

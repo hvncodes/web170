@@ -156,7 +156,7 @@ function add_slug_to_body_class($classes)
 {
     global $post;
     if (is_home()) {
-        $key = array_search('blog', $classes);
+        $key = array_search('whatever', $classes);
         if ($key > -1) {
             unset($classes[$key]);
         }
@@ -172,6 +172,17 @@ function add_slug_to_body_class($classes)
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
+    // Define Default Sidebar Widget
+    register_sidebar(array(
+        'name' => __('Default Sidebar Widget Area', 'html5blank'),
+        'description' => __('Default Sidebar', 'html5blank'),
+        'id' => 'sidebar-1',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
     // Define Wines Sidebar Widget
     register_sidebar(array(
         'name' => __('Wines Sidebar Widget Area', 'html5blank'),
@@ -199,6 +210,17 @@ if (function_exists('register_sidebar'))
         'name' => __('Tours Sidebar Widget Area', 'html5blank'),
         'description' => __('Tours sidebar', 'html5blank'),
         'id' => 'tours-sidebar',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Blog Sidebar Widget
+    register_sidebar(array(
+        'name' => __('Blog Sidebar Widget Area', 'html5blank'),
+        'description' => __('Blog sidebar', 'html5blank'),
+        'id' => 'blog-sidebar',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -262,7 +284,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read More...', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar

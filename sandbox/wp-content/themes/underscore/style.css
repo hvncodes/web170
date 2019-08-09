@@ -1,0 +1,740 @@
+/*!
+Theme Name: underscore
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: underscore
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+underscore is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+.home {
+  margin: 0;
+  background-image: url(http://www.flickeringflame.org/web170/sandbox/wp-content/uploads/bg-1.jpg) !important;
+  background-repeat: no-repeat !important;
+}
+
+body {
+  margin: 0;
+  background-image: url(http://www.flickeringflame.org/web170/sandbox/wp-content/uploads/bg-inner.jpg) !important;
+  background-repeat: no-repeat !important;
+}
+
+article.post {
+    border-bottom: 1px solid #000;
+    padding: 20px 0;
+}
+
+article.post:last-of-type {
+    border-bottom: none;
+}
+.entry-header {
+    margin-bottom: 20px;
+}
+.entry-title {
+    margin: 0 0 0 0;
+}
+.entry-content p {
+    margin: 20px 0;
+}
+
+/*++++++++++++++++++++++++++ MY CONTAINERS ++++++++++++++++++++++++++*/
+
+.site-header {
+/*  height: 200px;*/
+  max-width: 1100px;
+/*  margin: 0 auto;*/
+/*  background: pink;*/
+  margin: 20px auto 200px auto;
+/*  overflow: hidden;*/
+  height: 70px;
+}
+
+.home .site-header {
+  margin: 20px auto 20px auto;
+}
+
+/* LOGO */
+.site-branding {
+  float: left;
+}
+
+.main-navigation {
+  float: right;
+}
+/* This is our wrapper */
+.site-content {
+  clear: both;
+  max-width: 1100px;
+/*  height: 400px;*/
+/*  background: yellow;*/
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+}
+
+.home .site-content {
+  margin: 0 auto;
+}
+
+/* This is our main */
+.content-area {
+  float: left;
+  width: 61.70%;
+/*  background: tan;*/
+}
+
+.col-4 {
+  width: 23.404255319148936170212765957447%; /* 220(og)/940(total)*/
+  border: 1px dotted #800;
+/*  margin-right: 20px;*/
+}
+
+/*
+.col-4:nth-child(4) {
+  margin-right: 0;
+}*/
+
+.third {
+  width: 31.914893617021276595744680851064%;
+  border: 1px dotted #800;
+}
+
+.row .col-4 h3,
+.row .col-4 p,
+.row .third h3,
+.row .third p {
+  padding: 0 8px 10px 8px;
+    margin: 0;
+}
+
+.col-4 p.fix {
+  padding: 0;
+}
+
+.col-4 p,
+.third p {
+  font-size: .875em;
+  margin-bottom: 5px;
+}
+.row .col-4 h3 {
+    margin: 0;
+}
+.row .col-4 p.fix {
+    padding: 0;
+    margin: 0;
+}
+
+/* ASIDE */
+.widget-area {
+  float: right;
+  width: 36.17%;
+/*  background: lightblue;*/
+    padding: 20px;
+    border: 1px dotted #000;
+}
+
+.site-footer {
+/*  height: 400px;*/
+  background: #ddd;
+  clear: both;
+}
+
+.row {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+    float: right;
+}
+
+.right20 {
+  margin-right: 2.12%;
+}
+
+time.updated {
+    display: none;
+}
+
+span.cat-links,
+span.comments-link,
+span.edit-link {
+    display: block;
+}
+
+div.entry-meta,
+span.cat-links,
+span.comments-link,
+span.edit-link {
+    font-size: 0.75em;
+}
+
+span.comments-link {
+    text-align: center;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+	background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+	border-style: none;
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+.home h1 {
+  text-align: center;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+.home blockquote {
+  margin: 20px 10%;
+  font-size: 1.4em;
+  font-style: italic;
+}
+
+.inner blockquote {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  font-style: italic;
+  border-left: 20px solid #ccc;
+  padding-left: 5%;
+  line-height: 1.3;
+}
+
+.archive .page-header .page-title {
+    margin: 0;
+}
+.archive .page-header .page-title .vcard {
+    color: #e4002b;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+/*++++++ REMEMBER THE UL AND OL STYLING FOR YOUR MENUS +++++++++*/
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+#copyright {
+  height: 50px;
+  line-height: 50px;
+  background: #999;
+}
+
+footer li {
+  list-style-type: none;
+  float: left;
+  margin-left: 20px;
+}
+
+#copyright ul {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    padding-right: 20px;
+}
+
+div.site-info {
+    text-align: center;
+    clear: both;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    background: #777;
+}
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+    color: #e4002b;
+/*    color: royalblue;*/
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover, a:focus, a:active {
+    color: #98001d;
+/*	color: midnightblue;*/
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/*BE AWARE OF THIS STYLING FOR OUR NAVIGATION------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+    display: block;
+  margin-top: 20px;
+/*
+    clear: both;
+	float: left;
+	width: 100%;
+*/
+}
+
+.main-navigation li {
+  margin-left: 15px;
+}
+
+.main-navigation li .sub-menu li {
+  margin-left: 0;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    background: rgba(255,255,255,.7);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+.main-navigation ul ul > li:hover {
+    background: rgba(255,255,255,.9);
+}
+.main-navigation ul ul > li {
+    width: 100%;
+}
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+/*	width: 200px;*/
+  width: auto;
+  padding: 5px 10px;
+/*  padding: 0 5px;*/
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+    color: #e4002b!important;
+}
+
+.main-navigation a:hover {
+    color: #98001d!important;
+}
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*BE AWARE OF THE WIDGET STYLES - IF YOUR SIDEBAR IS BROKEN OR NOT BEHAVING
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em 0;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget-area .widget:nth-last-child(1) {
+    margin: 0;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget_recent_entries ul,
+.widget_categories ul,
+.widget_archive ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget-title {
+    margin: 0;
+    font-size: 1.25em;
+    color: #000;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}

@@ -42,6 +42,6 @@
 		<!-- /section -->
 	</main>
 <!-- get default sidebar -->
-<?php get_sidebar(); ?>
+<?php get_sidebar('wine'); ?>
 
 <?php get_footer(); ?>

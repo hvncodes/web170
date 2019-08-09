@@ -1,4 +1,5 @@
 <?php get_header();
+
 /*Template Name: Branches Front Page*/
 ?>
 <main id="content"><!--Branches Front Page-->

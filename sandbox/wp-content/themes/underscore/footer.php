@@ -10,10 +10,31 @@
  */
 
 ?>
-
+    
 	</div><!-- #content end wrapper -->
-
+    
 	<footer id="colophon" class="site-footer">
+        
+        
+        <?php echo do_shortcode('[widget id="custom_html-4"]'); ?>
+        
+        
+        
+        <div id="copyright">
+            <div class="wrapper">
+                <ul class="right">
+                    <li>Copyright &copy; 2019</li>
+                    <li>All Rights Reserved</li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Web Design by John</a></li>
+                    <li><a href="http://validator.w3.org/check?uri=referer">HTML5</a></li>
+                    <li><a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow" title="Validate CSS">CS3S</a></li>
+                </ul>
+            </div><!-- end copyright wrapper -->
+        </div><!-- end copyright -->
+        
+        
+        
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscore' ) ); ?>">
 				<?php
