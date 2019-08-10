@@ -22,7 +22,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     margin: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+    line-height: 1.5;
+    color: black;
+}
 #header {
     background-color: #ddd;
     width: 180px;
@@ -52,7 +56,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 #menu li {
   height: 40px;
   line-height: 40px;
-  background-color: aquamarine;
+  background-color: #8bfbf9;
 }
 #menu li a {
   padding-left: 20px;
@@ -100,10 +104,13 @@ aside#sidebar {
     width: 35%;
     float: right;
 }
+
 /*+++++++++++++++++++++++ TYPOGRAPHY +++++++++++++++++++++++*/
 h1 {
+    display: block;
     font-size: 3.052em;
-    margin-bottom: 9px;
+    margin: 0.67em 0;
+    color: #8bfbf9;
 }
 .center {
     text-align: center;
@@ -118,6 +125,58 @@ h4 {
     font-size: 1.563em;
 }
 blockquote {
+    display: block;
     margin: 0 10% 20px 10%;
-    font-size: 1.25em;
+    font-style: italic;
+}
+.front-blockquote {
+    font-size: 1.5em;
+}
+p {
+    display: block;
+    margin: 1em 0;
+}
+
+main#content ul {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0;
+    padding-left: 40px;
+}
+/* +++++++++++++++++++++++ W3SCHOOLS ACCORDIAN +++++++++++++++++++++++ */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
