@@ -99,7 +99,7 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/jquery.min.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
 }
@@ -157,7 +157,7 @@ function add_slug_to_body_class($classes)
 {
     global $post;
     if (is_home()) {
-        $key = array_search('whatever', $classes);
+        $key = array_search('33$GAE4y34yaer', $classes);
         if ($key > -1) {
             unset($classes[$key]);
         }
@@ -173,54 +173,43 @@ function add_slug_to_body_class($classes)
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
-    // Define Default Sidebar Widget
+    // Define Sidebar Widget Area 0 - Default
     register_sidebar(array(
-        'name' => __('Default Sidebar Widget Area', 'html5blank'),
-        'description' => __('Default Sidebar', 'html5blank'),
-        'id' => 'sidebar-1',
+        'name' => __('Default Sidebar', 'html5blank'),
+        'description' => __('Description for this default area...', 'html5blank'),
+        'id' => 'widget-area-0',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
     
-    // Define Wines Sidebar Widget
+    // Define Sidebar Widget Area 1 - About
     register_sidebar(array(
-        'name' => __('Wines Sidebar Widget Area', 'html5blank'),
-        'description' => __('Wines sidebar', 'html5blank'),
-        'id' => 'wines-sidebar',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-
-    // Define About Sidebar Widget
-    register_sidebar(array(
-        'name' => __('About Sidebar Widget Area', 'html5blank'),
-        'description' => __('About sidebar', 'html5blank'),
+        'name' => __('About Sidebar', 'html5blank'),
+        'description' => __('Define Sidebar Widget Area 1', 'html5blank'),
         'id' => 'about-sidebar',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
-    
-    // Define About Sidebar Widget
+
+    // Define Sidebar Widget Area 2 - Contact
     register_sidebar(array(
-        'name' => __('Tours Sidebar Widget Area', 'html5blank'),
-        'description' => __('Tours sidebar', 'html5blank'),
-        'id' => 'tours-sidebar',
+        'name' => __('Contact Sidebar', 'html5blank'),
+        'description' => __('Define Sidebar Widget Area 2', 'html5blank'),
+        'id' => 'contact-sidebar',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
     
-    // Define Blog Sidebar Widget
+    // Define Sidebar Widget Area 3 - Blog
     register_sidebar(array(
-        'name' => __('Blog Sidebar Widget Area', 'html5blank'),
-        'description' => __('Blog sidebar', 'html5blank'),
+        'name' => __('Blog Sidebar', 'html5blank'),
+        'description' => __('Define Sidebar Widget Area 3', 'html5blank'),
         'id' => 'blog-sidebar',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -285,7 +274,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read More...', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar

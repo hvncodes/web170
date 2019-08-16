@@ -22,21 +22,23 @@
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	-webkit-font-smoothing:antialiased;
+/*
 	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
+*/
 }
-/* html element 62.5% font-size for REM use */
+
 html {
-/*	font-size:62.5%;*/
-  font-size: 100%;
+	font-size: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: inherit;
 }
 body {
-/*  font: 300 11px/1.4;*/
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
-/*    background-image: url('http://flickeringflame.org/web170/portfolio/wp-content/uploads/bg-inner.jpg');*/
-    background-image: url('http://flickeringflame.org/web170/portfolio/wp-content/uploads/bg-inner-2.png');
-    background-repeat: no-repeat;
+    background: #312450;
+	color: rgba(255, 255, 255, 0.55);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16.5pt;
+    line-height: 1.75;
 }
 /* clear */
 .clear:before,
@@ -51,15 +53,18 @@ body {
 .clear {
     *zoom:1;
 }
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 img {
 	max-width:100%;
 	vertical-align:bottom;
 }
 a {
-/*
-	color:#444;
-	text-decoration:none;
-*/
+	color: #FFFFFF;
+	text-decoration: underline dotted #FFFFFF;
 }
 a:hover {
 	color:#444;
@@ -82,32 +87,31 @@ input:focus {
 
 /* wrapper */
 .wrapper {
-/*    background: beige;*/
-/*    max-width: 1280px;*/
-/*    width: 95%;*/
-  max-width: 1100px;
-  width: 80%;
-  margin: 178px auto 0 auto;
-  position: relative;
+	max-width: 1100px;
+	width: 80%;
+	margin: 0 auto 0 auto;
+	position: relative;
 }
 .home .wrapper {
-    margin: 20px auto 0 auto;
+    margin: 0 auto 0 auto;
+}
+.inner {
+    padding: 4em 4em 2em 4em;
 }
 /* header */
 .header {
-  max-width: 1100px;
-  width: 80%;
-  margin: 0 auto;
-/*  height: 70px;*/
-/*  background: lightcoral;*/
-  padding: 20px 0 0 0;
+    max-width: 1100px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    background: #493382;
 }
 /* logo */
 .logo {
-  float: left;
+    float: left;
 }
 .logo-img {
-
+    display: block;
 }
 /* nav */
 .nav {
@@ -118,18 +122,20 @@ input:focus {
 
 .nav ul {
 /*    background-color: #f44336;*/
-    background-color: rgba(0,0,0,0.2);
+/*    background-color: rgba(0,0,0,0.2);*/
     float: right;
     padding: 0;
 }
 .nav > ul {
 /*  padding: 5px 10px;*/
+    margin: 0;
+    margin-top: 30px;
 }
 .nav > ul > li {
   float: left;
-  margin-left: 20px;
+  margin-right: 20px;
   list-style-type: none;
-  padding: 5px 10px;
+/*  padding: 5px 10px;*/
 }
 /*
 .nav > ul > li:hover {
@@ -137,7 +143,7 @@ input:focus {
 }
 */
 .nav > ul > li:hover a {
-  color: #000;
+  color: #FFFFFF;
 }
 .nav a {
   text-decoration: none;
@@ -193,32 +199,34 @@ input:focus {
   background-color: #fff;
   color: #000;
 }
+
 /* main */
 main {
 /*    background-color: coral;*/
-    width: 66%;
+    width: 59%;
     float: left;
-    border: 1px dotted #000;
-    padding: 20px;
 }
-/* sidebar */
+/* section */
+section {
+    background: #5e42a6;
+}
+/* aside/sidebar */
 .sidebar {
-/*    background-color: cornflowerblue;*/
-    width: 32%;
+    background: #5052b5;
+    width: 40%;
     float: right;
-    padding: 20px;
-    border: 1px dotted #000;
+    padding: 4em 20px 2em 20px;
+/*    padding: 4em 4em 2em 4em; */
+/*    border-left: 1px dotted #000;*/
 }
 /* footer */
 .footer {
-  height: 300px;
-  background: #ddd;
-  clear: both;
+    background: #493382;
+    clear: both;
 }
-#footer-left-content {
-    width: 50%;
-    float: left;
-    overflow: hidden;
+
+.footer-inner {
+    padding: 4em 4em 2em 4em;
 }
 
 .view-article {
@@ -233,72 +241,10 @@ span.date,
 span.author,
 span.comments {
     display: block;
-    font-size: .875em;
+    font-size: .75em;
     font-style: italic;
 }
 
-span.comments {
-    margin-bottom: 10px;
-}
-
-section > h1 {
-    margin: 0;
-    margin-bottom: 20px;
-}
-
-div.comments {
-    
-}
-
-.single label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.comment-form-cookies-consent {
-    margin: 5px 0;
-}
-
-.comment-form-cookies-consent label {
-    display: inline;
-}
-.screen-reader-text {
-    display: none;
-}
-.widget_recent_comments,
-.widget_search,
-.widget_recent_entries,
-.widget_categories,
-.widget_archive {
-    margin: 0 0 20px 0; /* was previously 1.5em */
-	/* Make sure select elements fit in widgets. */
-}
-
-.widget-area .widget:nth-last-child(1) {
-    margin: 0;
-}
-
-.widget select {
-	max-width: 100%;
-}
-
-.widget_recent_comments ul,
-.widget_recent_entries ul,
-.widget_categories ul,
-.widget_archive ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.widget_recent_comments h3,
-.widget_recent_entries h3,
-.widget_categories h3,
-.widget_archive h3 {
-    margin: 0;
-    font-size: 1.25em;
-    color: #000;
-}
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
@@ -309,9 +255,7 @@ div.comments {
     IMAGES
 \*------------------------------------*/
 
-article > img {
-  display: block;
-}
+
 
 /*------------------------------------*\
 	TYPOGRAPHY
@@ -327,75 +271,89 @@ article > img {
     font-weight:normal;
     font-style:normal;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 0.5em 0;
+}
+
 h1 {
-    font-size: 3.052em;
-}
-h2 {
-    font-size: 2.44em;
-}
-h3 {
-    font-size: 1.953em;
-}
-h4 {
-    font-size: 1.563em;
-}
-blockquote {
-    margin: 0 10% 20px 10%;
-    font-size: 1.25em;
+    font-size: 2.75em;
 }
 p {
-    padding: 10px 20px;
+    margin: 0 0 2em 0;
 }
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
 
-/*
-@media only screen and (min-width:320px) {
-    #footer-left-content {
+@media screen and (max-width: 320px){
+
+}
+
+
+@media screen and (max-width: 480px){
+    body {
+        font-size: 10pt;
+    }
+    h1 {
+        font-size: 1.75em;
+    }
+    .header, .wrapper {
         width: 100%;
     }
 }
-@media only screen and (min-width:480px) {
-    #footer-left-content {
+
+@media screen and (max-width: 640px){
+    body {
+        font-size: 12pt;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .header, .wrapper {
         width: 100%;
     }
 }
-@media only screen and (min-width:768px) {
-    #footer-left-content {
+ 
+@media screen and (max-width: 768px){
+    body {
+        font-size: 12pt;
+    }
+    .logo-img {
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .header, .wrapper {
         width: 100%;
     }
-}
-@media only screen and (min-width:1024px) {
-    #footer-left-content {
-        width: 50%;
+    .header {
+        padding: 20px 0 20px 0;
     }
-}
-@media only screen and (min-width:1140px) {
-    #footer-left-content {
-        width: 50%;
+    .logo {
+        float: none;
     }
-}
-@media only screen and (min-width:1280px) {
-    #footer-left-content {
-        width: 50%;
+    .nav > ul {
+        margin-top: 0;
     }
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
-
-}
-*/
-
-        /*------------------------------------*\
-            Start Mobile Styles
-        \*------------------------------------*/
-
-/*.nav-button { display: none; }  hide the navigation button by default */
-
-@media screen and (max-width: 700px) {
-
-	/* Navigation Button
+    
+    /* main */
+    main {
+        width: 100%;
+        float: none;
+    }
+    /* aside/sidebar */
+    .sidebar {
+        width: 100%;
+        float: none;
+        padding: 4em 4em 2em 4em; 
+    }
+    
+    /* Navigation Button
 	-------------------------------------------------------- */
 
 	.nav-button {
@@ -435,7 +393,7 @@ p {
 	.primary-nav {
 		width: 100%;
 		float: none;
-		background-color: #238be3; /* change the menu color, Olga: #800*/
+		background-color: #312450; /* change the menu color, default: #238be3, Olga: #800*/
 		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		display: block;
 		height: 50px;
@@ -487,10 +445,6 @@ p {
     }
 */
     
-    
-    
-    
-    
 	.primary-nav li a {
 		display: block;
 		width: 100%; /*90%*/
@@ -524,7 +478,8 @@ p {
 	/* Submenus – optional .parent class indicates dropdowns */
 
 	.primary-nav > li:hover > a {
-		background: rgba(0,0,0,.5);
+/*		background: rgba(0,0,0,.5);*/
+        background: #5e42a6;
 		border-bottom-color: transparent;
 	}
 	.primary-nav li.parent > a:after {
@@ -551,12 +506,23 @@ p {
 		display: block;
 		border-top: 0 none;
 	}
+}
+ 
+@media screen and (max-width: 1024px){
+    body {
+        font-size: 12pt;
+    }
+}
+ 
+@media screen and (max-width: 1280px){
+    body {
+        font-size: 13pt;
+    }
+}
+
+@media screen and (max-width: 1680px) {
 
 }
-        /*------------------------------------*\
-            End Mobile Styles
-        \*------------------------------------*/
-
 
 /*------------------------------------*\
     MISC
